@@ -17,8 +17,8 @@ app.use express.static(__dirname + '/public')
 #app.use(express.logger())
 app.use(express.bodyParser())
 
-#app.use express.cookieParser()
-#app.use express.session secret: 'goobers'
+app.use express.cookieParser()
+app.use express.session secret: 'goobers'
 
 # Setup Assets
 app.use require('connect-assets')()
@@ -37,5 +37,5 @@ app.post '/', validateScore(), (req, resp) ->
 # Listen
 app.listen 3000, -> console.log 'Listening on port 3000'
 
-#pin.on 'newActivity', (activity) ->
-  #everyone.now.newActivity activity
+pin.on 'newActivity', (activity) ->
+  everyone.now.newActivity activity

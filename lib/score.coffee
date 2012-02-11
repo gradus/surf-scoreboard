@@ -12,6 +12,7 @@ pin.on 'score.new', (score) ->
   new Score(score)
 
 pin.on 'newScore', (score) ->
+  console.log score
   pin.emit 'calculateScore', score
 
 exports.Score = Score
