@@ -1,6 +1,7 @@
 pin = require('./linchpin')
 
-#pin.on 'setScore', (score) ->
-  ##save score to the database
-  #pin.emit 'score.end', score
+pin.on 'setScore', (score) ->
+  #save score to the database
+  console.log score
+  pin.emit 'score.end', score
 
