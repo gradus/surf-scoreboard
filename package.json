@@ -11,17 +11,14 @@
   "dependencies": {
     "coffee-script": ">= 1.x",
     "mongoskin": "*",
-    "linchpin": "*",
     "jade": "*",
     "connect-assets": "*",
     "stylus": "*",
     "nib": "*",
-    "bootstrap-stylus": "*",
     "express": "*",
     "utile": "*",
     "revalidator": "*",
     "request": "*",
-    "csvjs": "*",
     "now": "*"
   },
   "devDependencies": {
