@@ -18,5 +18,6 @@ module.exports = ->
     return next() if result.valid
     
     #resp.cookies.errors = result.errors
-    resp.render 'index', title: 'Your Title Here', errors: result.errors, data: req.body
+    console.log req.body.score
+    resp.render 'index', title: 'ScoreBoard', errors: result.errors, data: req.body.score
 
