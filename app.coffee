@@ -29,10 +29,6 @@ app.get '/', (req, resp) ->
 
 app.post '/', validateScore(), (req, resp) ->
   pin.emit 'score.new', req.body.score
-  pin.on 'score.end', (score) ->
-    console.log 'end'
-    #resp.render 'index', title: 'Scoreboard', errors: null, data: score
-
 
 # Listen
 app.listen 3000, -> console.log 'Listening on port 3000'
