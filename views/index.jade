@@ -1,0 +1,27 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.brand(href='#') Scoreboard
+      .nav-collapse
+        ul.nav
+          li.active
+            a(href='#') Home
+
+.container
+  .row
+    .span4
+      h3 New Score
+      form(action="/", method="POST", enctype="multipart/form-data")
+        p
+          label Scores
+          input(name="score", style="width:20px;")
+        p
+          button Submit
+    .span4
+      h3 Scores
+        - data == null ? '' : data.score
+        = data

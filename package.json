@@ -1,0 +1,34 @@
+{
+  "name": "ScoreBoard",
+  "description": "An Application for Scoring surf contests",
+  "version": "0.0.1",
+  "homepage": "http://",
+  "author": "Kris Windham",
+  "private": true,
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "dependencies": {
+    "coffee-script": ">= 1.x",
+    "mongoskin": "*",
+    "linchpin": "*",
+    "jade": "*",
+    "connect-assets": "*",
+    "stylus": "*",
+    "nib": "*",
+    "bootstrap-stylus": "*",
+    "express": "*",
+    "utile": "*",
+    "revalidator": "*",
+    "request": "*",
+    "csvjs": "*",
+    "now": "*"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "nock": "*"
+  },
+  "engines": { "node": "0.6 || 0.7" }
+}
+
