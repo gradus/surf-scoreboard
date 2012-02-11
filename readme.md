@@ -22,14 +22,14 @@ install mongo using homebrew:
   $ sudo mkdir -p /data/db/
   $ sudo chown `id -u` /data/db
 
-git clone 
-cd 
+git clone git@github.com:gradus/surf-scoreboard.git 
+cd surf-scoreboard
 npm install .
 ```
 
 # Usage
 ``` sh
-start mongo
+start mongo in another terminal window with mongod
 node server.js
 visit localhost:3000
 ```
