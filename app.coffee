@@ -1,6 +1,7 @@
 pin = require './lib/linchpin'
 now = require 'now'
 require './lib/init'
+validateScore = require './lib/validateScore'
 
 jade = require 'jade'
 express = require 'express'
@@ -26,10 +27,11 @@ app.use require('connect-assets')()
 app.get '/', (req, resp) ->
   resp.render 'index', title: 'Scoreboard', errors: null, data: null
 
-app.post '/', (req, resp) ->
+app.post '/', validateScore(), (req, resp) ->
   pin.emit 'score.new', req.body.score
   pin.on 'score.end', (score) ->
-    resp.render 'index', title: 'Scoreboard', errors: null, data: score
+    console.log 'end'
+    #resp.render 'index', title: 'Scoreboard', errors: null, data: score
 
 
 # Listen
