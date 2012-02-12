@@ -14,4 +14,4 @@ pin.once 'setScore', (score) ->
     else
       @id = result._id unless @id?
       pin.emit 'score.end', result
-      console.log result
+
