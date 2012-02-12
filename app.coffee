@@ -1,4 +1,4 @@
-pin = require './lib/linchpin'
+pin = require 'linchpin'
 now = require 'now'
 require './lib/init'
 validateScore = require './lib/validateScore'

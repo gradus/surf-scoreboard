@@ -1,4 +1,4 @@
-pin = require('./linchpin')
+pin = require('linchpin')
 
 pin.once 'calculateScore', (score) ->
   # Do some calculations with score

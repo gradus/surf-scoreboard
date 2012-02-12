@@ -1,4 +1,4 @@
-pin = require('./linchpin')
+pin = require('linchpin')
 events = require('events')
 #mongo = require('mongoskin')
 #db = require('mongoskin').db(process.env.MONGO or 'localhost:27017/billing')

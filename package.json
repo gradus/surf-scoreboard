@@ -13,6 +13,7 @@
     "coffee-script": ">= 1.x",
     "mongoskin": "*",
     "jade": "*",
+    "linchpin": "*",
     "connect-assets": "*",
     "stylus": "*",
     "nib": "*",
