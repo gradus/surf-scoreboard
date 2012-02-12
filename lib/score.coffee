@@ -1,10 +1,10 @@
 pin = require('linchpin')
 events = require('events')
 #mongo = require('mongoskin')
-#db = require('mongoskin').db(process.env.MONGO or 'localhost:27017/billing')
+#db = require('mongoskin').db(process.env.MONGO or 'localhost:27017/scoreboard')
 
 class Score extends events.EventEmitter
- 	constructor: (data) ->
+  constructor: (data) ->
     @[k] = v for k,v of data
     @listeners()
     pin.emit 'newScore', this
