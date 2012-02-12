@@ -6,6 +6,7 @@ events = require('events')
 class Score extends events.EventEmitter
  	constructor: (data) ->
     @[k] = v for k,v of data
+    @listeners()
     pin.emit 'newScore', this
 
 pin.once 'score.new', (score) ->
