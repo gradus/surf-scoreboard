@@ -1,5 +1,4 @@
 revalidator = require 'revalidator'
-pin = require('linchpin')
 
 # Validate Scores Connect Middleware
 module.exports = (validateScore) ->
