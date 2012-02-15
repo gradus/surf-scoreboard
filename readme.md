@@ -2,9 +2,9 @@
 
 Framework: express
  
-Template: Jade
+Client: Ember.JS
 
-DataStore: MongoDB
+DataStore: MongoDB ( not yet implemented )
  
 # About
 
