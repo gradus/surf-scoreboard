@@ -24,9 +24,9 @@ app.get '/', (req, resp) ->
 app.post '/scores', express.bodyParser(), (req, resp) ->
   result = validateScore(req.body)
   if result.valid
-    pin.on 'score.end', (score) ->
+    pin.on 'displayScore', (score) ->
      resp.json errors: null, score: score
-    pin.emit 'score.process', req.body
+    pin.emit 'calculateScore', req.body
   else
     resp.json errors: result.errors, records: null
 
@@ -34,5 +34,4 @@ app.post '/scores', express.bodyParser(), (req, resp) ->
 app.listen 3000, -> console.log 'Listening on port 3000'
 
 pin.on 'displayScore', (score) ->
-  console.log score
   everyone.now.displayScore(score.score)
