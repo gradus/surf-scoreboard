@@ -17,7 +17,7 @@ body {
   display: none;
 }
 
-input#score {
+input#score, input#heat_num {
   width: 40px;
 }
 
