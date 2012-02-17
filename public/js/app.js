@@ -32,7 +32,6 @@
       score: ''
     });
     return window.App.ScoreBoardView = Ember.View.extend({
-      didInsertElement: function() {},
       change: function() {
         return this.set('score', $('input[name=score]').val());
       },

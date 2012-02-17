@@ -23,17 +23,14 @@ $ ->
   $('.nav li').removeClass('active')
   showPage(window.location.hash || '#home')
 
+  # Ember.JS
   window.App = Ember.Application.create()
   window.App.scoreBoard = Ember.Object.create
     score : ''
 
-  # Ember.JS
   window.App.ScoreBoardView = Ember.View.extend
-    didInsertElement: ->
-      #$('input[name=score]').val(@get('content'))
 
     change: ->
-      #window.App.scoreBoard.get('content').set 'score', $('input[name=score]').val()
       @set 'score', $('input[name=score]').val()
     submit: ->
       @set 'score', $('input[name=score]').val()
