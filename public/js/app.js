@@ -3,7 +3,10 @@
   $(function() {
     var hideCurrent, showPage;
     now.displayScore = function(score) {
-      return $('#scoring').append(" <li> <div class='alert alert-warning'> <p>Score: " + score + "</p> </li>");
+      return $('#scoring').append(" <li> <div class='alert alert-warning'> <p>Score: " + score.score + "</p> </li>");
+    };
+    now.displayTotal = function(total) {
+      return $('#totals').append(" <li> <div class='alert alert-warning'> <p>Total: " + total.total + "</p> </li>");
     };
     hideCurrent = function() {
       $('.page.current').fadeOut(500).removeClass('current');

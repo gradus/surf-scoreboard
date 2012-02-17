@@ -13,9 +13,6 @@ app.use express.static(__dirname + '/public')
 #app.use(express.logger())
 app.use(express.bodyParser())
 
- #Setup Assets
-#app.use require('connect-assets')()
-
 # App Routes
 app.get '/', (req, resp) ->
   resp.writeHead 200, "Content-Type": "text/html"
@@ -34,4 +31,7 @@ app.post '/scores', express.bodyParser(), (req, resp) ->
 app.listen 3000, -> console.log 'Listening on port 3000'
 
 pin.on 'displayScore', (score) ->
-  everyone.now.displayScore(score.score)
+  everyone.now.displayScore(score)
+pin.once 'setTotal', (total) ->
+  console.log total
+  everyone.now.displayTotal(total)
