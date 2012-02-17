@@ -1,7 +1,7 @@
 {
   "name": "ScoreBoard",
   "description": "An Application for Scoring surf contests",
-  "version": "0.0.1-4",
+  "version": "0.0.2",
   "homepage": "http://",
   "author": "Kris Windham",
   "private": true,
@@ -12,15 +12,21 @@
   "dependencies": {
     "coffee-script": ">= 1.x",
     "mongoskin": "*",
-    "linchpin": "*",
+    "jade": "*",
+    "connect-assets": "*",
+    "stylus": "*",
+    "nib": "*",
     "express": "*",
     "utile": "*",
     "revalidator": "*",
-    "now": "*"
+    "request": "*",
+    "now": "*",
+    "linchpin": "0.1.x"
   },
   "devDependencies": {
     "mocha": "*",
     "should": "*",
+    "nock": "*"
   },
   "engines": {
     "node": "0.6 || 0.7"

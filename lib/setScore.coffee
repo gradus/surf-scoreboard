@@ -1,6 +1,7 @@
 pin = require('linchpin')
 mongo = require('mongoskin')
 db = require('mongoskin').db(process.env.MONGO or 'localhost:27017/scoreboard')
+
 # Open Collection
 scores = db.collection('scores')
 scores.open -> pin.emit 'mongo.collection.scores.opened'
