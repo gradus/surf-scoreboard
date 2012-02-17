@@ -4,7 +4,7 @@ Framework: express
  
 Client: Ember.JS
 
-DataStore: MongoDB ( not yet implemented )
+DataStore: MongoDB
  
 # About
 
