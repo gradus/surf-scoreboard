@@ -20,4 +20,9 @@ input#score, input#heat_num {
   width: 40px;
 }
 
+#heat-num, #judge-name {
+  float: left;
+  padding: 0 5px 0 5px;
+}
+
 

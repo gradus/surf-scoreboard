@@ -1,8 +1,8 @@
-pin = require 'linchpin'
-now = require 'now'
 require './lib/init'
 validateScore = require './lib/validateScore'
-
+pin = require 'linchpin'
+now = require 'now'
+fs = require 'fs'
 express = require 'express'
 app = express.createServer()
 
@@ -20,13 +20,15 @@ app.get '/', (req, resp) ->
   resp.writeHead 200, "Content-Type": "text/html"
   resp.end fs.readFileSync('./public/index.html')
 
-app.post '/', express.cookieParser(), (req, resp) ->
+app.post '/', express.bodyParser(), (req, resp) ->
   resp.cookie('judge_name', req.body.judge_name, { maxAge: 12000 * 10000 })
   resp.cookie('heat_num', req.body.heat_num, { maxAge: 400 * 10000 })
-  resp.redirect '/#scores'
+  resp.redirect '#scores'
+  resp.end fs.readFileSync('./public/index.html')
 
 app.post '/scores', express.bodyParser(), (req, resp) ->
   result = validateScore(req.body)
+  console.log req.body
   if result.valid
     pin.on 'displayScore', (score) ->
      resp.json errors: null, score: score
