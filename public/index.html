@@ -46,6 +46,19 @@
               <input id="judge_name" name="judge_name"></input>
               <label>Heat #</label>
               <input id="heat_num" name="heat_num"></input>
+
+              <label>Surfer #1</label>
+              <input id="surfer_1" name="surfer_1"></input>
+              <label>Surfer #2</label>
+              <input id="surfer_2" name="surfer_2"></input>
+              <label>Surfer #3</label>
+              <input id="surfer_3" name="surfer_3"></input>
+              <label>Surfer #4</label>
+              <input id="surfer_4" name="surfer_4"></input>
+              <label>Surfer #5</label>
+              <input id="surfer_5" name="surfer_5"></input>
+              <label>Surfer #6</label>
+              <input id="surfer_6" name="surfer_6"></input>
             </p>
             <p><button type="submit" value="submit">Submit</button></p>
           </form>
@@ -74,7 +87,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="span1">
+      <div class="span2">
         <h4>scores</h4>
         <div class="scoreboard-errors"></div>
         <script type="text/html">
@@ -82,10 +95,12 @@
             <form action='/scores' method="POST">
 
             <p>
-            <div class='alert alert-warning' style="float:left;">Rose</div>
-              <input id="score" name="score" {{bindAttr value="score"}}"></input>
-              <input type="hidden" id="heatNum" name="heat_num" {{bindAttr value="heatNum"}}"></input>
-              <input type="hidden" id="judgeName" name="judge_name" {{bindAttr value="judgeName"}}"></input>
+            <div class='alert alert-warning' style="float:left;">{{surfer1}}</div>
+              <input id="score" name="score" {{bindAttr value="score"}} style="float:left;"></input>
+              <input type="hidden" id="heatNum" name="heat_num" {{bindAttr value="heatNum"}}></input>
+              <input type="hidden" id="judgeName" name="judge_name" {{bindAttr value="judgeName"}}></input>
+              <input type="hidden" id="surfer1" name="surfer_1" {{bindAttr value="surfer1"}}></input>
+
             </p>
 
             <p><button>Submit</button></p>

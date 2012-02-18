@@ -1,7 +1,7 @@
 (function() {
 
   $(function() {
-    var heatNum, hideCurrent, judgeName, showPage;
+    var heatNum, hideCurrent, judgeName, showPage, surfer1, surfer2, surfer3, surfer4, surfer5, surfer6;
     now.displayScore = function(score) {
       return $('#scoring').append(" <li> <div class='alert alert-warning'> <p>" + score.judge_name + " " + score.score + "</p> </li>");
     };
@@ -29,15 +29,34 @@
     showPage(window.location.hash || '#home');
     heatNum = $.cookie('heat_num');
     judgeName = $.cookie('judge_name');
+    heatNum = $.cookie('heat_num');
+    surfer1 = $.cookie('surfer_1');
+    surfer2 = $.cookie('surfer_2');
+    surfer3 = $.cookie('surfer_3');
+    surfer4 = $.cookie('surfer_4');
+    surfer5 = $.cookie('surfer_5');
+    surfer6 = $.cookie('surfer_6');
     window.App = Ember.Application.create();
     window.App.scoreBoard = Ember.Object.create({
       score: '',
       heatNum: heatNum,
-      judgeName: judgeName
+      judgeName: judgeName,
+      surfer1: surfer1,
+      surfer2: surfer2,
+      surfer3: surfer3,
+      surfer4: surfer4,
+      surfer5: surfer5,
+      surfer6: surfer6
     });
     return window.App.ScoreBoardView = Ember.View.extend({
       heatNum: heatNum,
       judgeName: judgeName,
+      surfer1: surfer1,
+      surfer2: surfer2,
+      surfer3: surfer3,
+      surfer4: surfer4,
+      surfer5: surfer5,
+      surfer6: surfer6,
       change: function() {
         return this.set('score', $('input[name=score]').val());
       },

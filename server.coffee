@@ -23,6 +23,12 @@ app.get '/', (req, resp) ->
 app.post '/', express.bodyParser(), (req, resp) ->
   resp.cookie('judge_name', req.body.judge_name, { maxAge: 12000 * 10000 })
   resp.cookie('heat_num', req.body.heat_num, { maxAge: 400 * 10000 })
+  resp.cookie('surfer_1', req.body.surfer_1, { maxAge: 400 * 10000 })
+  resp.cookie('surfer_2', req.body.surfer_2, { maxAge: 400 * 10000 })
+  resp.cookie('surfer_3', req.body.surfer_3, { maxAge: 400 * 10000 })
+  resp.cookie('surfer_4', req.body.surfer_4, { maxAge: 400 * 10000 })
+  resp.cookie('surfer_5', req.body.surfer_5, { maxAge: 400 * 10000 })
+  resp.cookie('surfer_6', req.body.surfer_6, { maxAge: 400 * 10000 })
   resp.redirect '#scores'
   #resp.end fs.readFileSync('./public/index.html')
 

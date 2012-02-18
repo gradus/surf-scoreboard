@@ -26,6 +26,13 @@ $ ->
 #Set Cookies
   heatNum =  $.cookie('heat_num')
   judgeName  =  $.cookie('judge_name')
+  heatNum =  $.cookie('heat_num')
+  surfer1 =  $.cookie('surfer_1')
+  surfer2 =  $.cookie('surfer_2')
+  surfer3 =  $.cookie('surfer_3')
+  surfer4 =  $.cookie('surfer_4')
+  surfer5 =  $.cookie('surfer_5')
+  surfer6 =  $.cookie('surfer_6')
 
 # Ember.JS
   window.App = Ember.Application.create()
@@ -33,10 +40,22 @@ $ ->
     score : ''
     heatNum : heatNum
     judgeName : judgeName
+    surfer1 : surfer1
+    surfer2 : surfer2
+    surfer3 : surfer3
+    surfer4 : surfer4
+    surfer5 : surfer5
+    surfer6 : surfer6
 
   window.App.ScoreBoardView = Ember.View.extend
     heatNum : heatNum
     judgeName : judgeName
+    surfer1 : surfer1
+    surfer2 : surfer2
+    surfer3 : surfer3
+    surfer4 : surfer4
+    surfer5 : surfer5
+    surfer6 : surfer6
 
     change: ->
       @set 'score', $('input[name=score]').val()
