@@ -1,7 +1,7 @@
 (function() {
 
   $(function() {
-    var hideCurrent, showPage;
+    var heatNumber, hideCurrent, judgeName, showPage;
     now.displayScore = function(score) {
       return $('#scoring').append(" <li> <div class='alert alert-warning'> <p>Score: " + score.score + "</p> </li>");
     };
@@ -27,9 +27,13 @@
     });
     $('.nav li').removeClass('active');
     showPage(window.location.hash || '#home');
+    heatNumber = $.cookie('heat_num');
+    judgeName = $.cookie('judge_name');
     window.App = Ember.Application.create();
     window.App.scoreBoard = Ember.Object.create({
-      score: ''
+      score: '',
+      heatNum: heatNumber,
+      judgeName: judgeName
     });
     return window.App.ScoreBoardView = Ember.View.extend({
       change: function() {

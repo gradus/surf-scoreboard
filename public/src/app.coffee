@@ -23,10 +23,15 @@ $ ->
   $('.nav li').removeClass('active')
   showPage(window.location.hash || '#home')
 
+  heatNumber =  $.cookie('heat_num')
+  judgeName  =  $.cookie('judge_name')
+
   # Ember.JS
   window.App = Ember.Application.create()
   window.App.scoreBoard = Ember.Object.create
     score : ''
+    heatNum : heatNumber
+    judgeName : judgeName
 
   window.App.ScoreBoardView = Ember.View.extend
 

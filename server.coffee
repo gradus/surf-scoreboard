@@ -21,8 +21,8 @@ app.get '/', (req, resp) ->
   resp.end fs.readFileSync('./public/index.html')
 
 app.post '/', express.cookieParser(), (req, resp) ->
-  resp.cookie('judge_name', req.body.judge_name, { maxAge: 12000 * 1000 })
-  resp.cookie('heat_num', req.body.heat_num, { maxAge: 400 * 1000 })
+  resp.cookie('judge_name', req.body.judge_name, { maxAge: 12000 * 10000 })
+  resp.cookie('heat_num', req.body.heat_num, { maxAge: 400 * 10000 })
   resp.redirect '/#scores'
 
 app.post '/scores', express.bodyParser(), (req, resp) ->
