@@ -12,21 +12,15 @@
   "dependencies": {
     "coffee-script": ">= 1.x",
     "mongoskin": "*",
-    "jade": "*",
-    "connect-assets": "*",
-    "stylus": "*",
-    "nib": "*",
     "express": "*",
     "utile": "*",
     "revalidator": "*",
-    "request": "*",
     "now": "*",
     "linchpin": "0.1.x"
   },
   "devDependencies": {
     "mocha": "*",
-    "should": "*",
-    "nock": "*"
+    "should": "*"
   },
   "engines": {
     "node": "0.6 || 0.7"
