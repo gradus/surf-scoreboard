@@ -1,7 +1,7 @@
 {
   "name": "ScoreBoard",
   "description": "An Application for Scoring surf contests",
-  "version": "0.0.2-4",
+  "version": "0.0.2-7",
   "homepage": "http://",
   "author": "Kris Windham",
   "private": true,
@@ -29,7 +29,7 @@
     "nock": "*"
   },
   "engines": {
-    "node": "0.6.11 || 0.7.x"
+    "node": "0.6 || 0.7"
   },
   "subdomain": "surf-scoreboard"
 }

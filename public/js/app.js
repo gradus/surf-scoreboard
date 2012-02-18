@@ -3,11 +3,11 @@
   $(function() {
     var heatNum, hideCurrent, judgeName, showPage;
     now.displayScore = function(score) {
-      return $('#scoring').append(" <li> <div class='alert alert-warning'> <p>Score: " + score.score + "</p> </li>");
+      return $('#scoring').append(" <li> <div class='alert alert-warning'> <p>" + score.judge_name + " " + score.score + "</p> </li>");
     };
     now.displayTotal = function(total) {
       $('#totals').html('');
-      return $('#totals').append(" <li> <div class='alert alert-warning'> <p>Total: " + total + "</p> </li>");
+      return $('#totals').append(" <li> <div class='alert alert-warning'> <p>" + total + "</p> </li>");
     };
     hideCurrent = function() {
       $('.page.current').fadeOut(500).removeClass('current');

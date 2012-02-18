@@ -75,14 +75,14 @@
     </div>
     <div class="row">
       <div class="span1">
-        <h4>scoring</h4>
+        <h4>scores</h4>
         <div class="scoreboard-errors"></div>
         <script type="text/html">
           {{#view App.ScoreBoardView contentBinding="App.scoreBoard"}}
             <form action='/scores' method="POST">
 
             <p>
-              <label>Score</label>
+            <div class='alert alert-warning' style="float:left;">Rose</div>
               <input id="score" name="score" {{bindAttr value="score"}}"></input>
               <input type="hidden" id="heatNum" name="heat_num" {{bindAttr value="heatNum"}}"></input>
               <input type="hidden" id="judgeName" name="judge_name" {{bindAttr value="judgeName"}}"></input>
@@ -94,11 +94,11 @@
         </script>
       </div>
       <div class="span1 scores">
-        <h4>scores</h4>
+        <h4>judging</h4>
         <div id="scoring"></div>
       </div>
       <div class="span1 totals">
-        <h4>Totals</h4>
+        <h4>Total</h4>
         <div id="totals"></div>
       </div>
     </div>

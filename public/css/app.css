@@ -2,6 +2,13 @@ body {
   padding: 60px 12px 30px 12px;
 }
 
+/*Bootstrap overrides*/
+
+.alert {
+  padding: 1px !important;
+  margin: 2px !important;
+}
+
 .required {
   color: darkred
 }

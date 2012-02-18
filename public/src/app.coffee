@@ -1,10 +1,10 @@
 $ ->
 
   now.displayScore = (score) ->
-    $('#scoring').append(" <li> <div class='alert alert-warning'> <p>Score: #{score.score}</p> </li>")
+    $('#scoring').append(" <li> <div class='alert alert-warning'> <p>#{score.judge_name} #{score.score}</p> </li>")
   now.displayTotal = (total) ->
     $('#totals').html('')
-    $('#totals').append(" <li> <div class='alert alert-warning'> <p>Total: #{total}</p> </li>")
+    $('#totals').append(" <li> <div class='alert alert-warning'> <p>#{total}</p> </li>")
   hideCurrent = ->
     # current page fade
     $('.page.current').fadeOut(500).removeClass('current')
