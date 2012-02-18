@@ -27,6 +27,9 @@
     });
     $('.nav li').removeClass('active');
     showPage(window.location.hash || '#home');
+    $("#surfer").bind('click', function() {
+      return $("#colors").fadeIn(500);
+    });
     heatNum = $.cookie('heat_num');
     judgeName = $.cookie('judge_name');
     heatNum = $.cookie('heat_num');
@@ -39,6 +42,7 @@
     window.App = Ember.Application.create();
     window.App.scoreBoard = Ember.Object.create({
       score: '',
+      surfer: '',
       heatNum: heatNum,
       judgeName: judgeName,
       surfer1: surfer1,

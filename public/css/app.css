@@ -9,6 +9,150 @@ body {
   margin: 2px !important;
 }
 
+input#score, input#score2, input#score3, input#score4, input#score5, input#score6, input#heat_num {
+  width: 30px;
+  height: 20px;
+}
+
+.box {
+  width: 20px;
+  height: 20px;
+}
+
+#colors {
+  /*display: none;*/
+  width: 110px;
+}
+
+.alert_yellow {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: lightYellow;
+  border: 1px solid #171717;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.alert_red {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: red;
+  border: 1px solid #171717;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.alert_blue {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: blue;
+  border: 1px solid #171717;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.alert_green {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: green;
+  border: 1px solid #171717;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.alert_orange {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: orange;
+  border: 1px solid #171717;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.alert_white {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: whiteSmoke;
+  border: 1px solid #171717;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+#surfer1 {
+  cursor: pointer;
+  padding: 3px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: lightYellow;
+  border: 1px solid #171717;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+
+}
+
+#surfer2 {
+  cursor: pointer;
+  padding: 3px;
+  color: #ffffff;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: red;
+  border: 1px solid #171717;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+
+}
+
+#surfer3 {
+  cursor: pointer;
+  padding 3px;
+  color: #ffffff;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: green;
+  border: 1px solid #171717;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+
+}
+
+#surfer4 {
+  cursor: pointer;
+  padding: 3px;
+  color: #ffffff;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: blue;
+  border: 1px solid #171717;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+
+}
+
+#surfer5 {
+  cursor: pointer;
+  padding: 3px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: whiteSmoke;
+  border: 1px solid #171717;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+
+}
+
+#surfer6 {
+  cursor: pointer;
+  padding: 3px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: orange;
+  border: 1px solid #171717;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+
+}
+
 .required {
   color: darkred
 }
@@ -23,13 +167,8 @@ body {
   display: none;
 }
 
-input#score, input#heat_num {
-  width: 40px;
-}
-
 #heat-num, #judge-name {
   float: left;
   padding: 0 5px 0 5px;
 }
-
 

@@ -1,5 +1,4 @@
 $ ->
-
   now.displayScore = (score) ->
     $('#scoring').append(" <li> <div class='alert alert-warning'> <p>#{score.judge_name} #{score.score}</p> </li>")
   now.displayTotal = (total) ->
@@ -23,6 +22,9 @@ $ ->
   $('.nav li').removeClass('active')
   showPage(window.location.hash || '#home')
 
+  # Select surfer by color menu
+  $("#surfer").bind('click', () -> $("#colors").fadeIn(500))
+
 #Set Cookies
   heatNum =  $.cookie('heat_num')
   judgeName  =  $.cookie('judge_name')
@@ -38,6 +40,7 @@ $ ->
   window.App = Ember.Application.create()
   window.App.scoreBoard = Ember.Object.create
     score : ''
+    surfer: ''
     heatNum : heatNum
     judgeName : judgeName
     surfer1 : surfer1
@@ -50,6 +53,13 @@ $ ->
   window.App.ScoreBoardView = Ember.View.extend
     heatNum : heatNum
     judgeName : judgeName
+    #score1 : score1
+    #score2 : score2
+    #score3 : score3
+    #score4 : score4
+    #score5 : score5
+    #score6 : score6
+
     surfer1 : surfer1
     surfer2 : surfer2
     surfer3 : surfer3

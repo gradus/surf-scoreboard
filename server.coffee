@@ -48,5 +48,5 @@ app.listen 3000, -> console.log 'Listening on port 3000'
 
 pin.on 'displayScore', (score) ->
   everyone.now.displayScore(score)
-pin.on 'setTotal', (averageScore) ->
+pin.on 'displayTotal', (averageScore) ->
   everyone.now.displayTotal(averageScore)

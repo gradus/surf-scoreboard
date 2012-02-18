@@ -12,7 +12,8 @@ roundNum = (num, dec) ->
 
 
 pin.on 'calculateScore', (score) ->
-  # Do calculations with score
+
+  # Do calculations with score for totals
   scores.find().toArray (err, result) ->
     scoresLength = result.length
     @total = 0
@@ -21,5 +22,7 @@ pin.on 'calculateScore', (score) ->
         if key == "score"
           @total += parseInt(val.score)
           averageScore = @total / scoresLength
-          pin.emit 'setTotal', roundNum(averageScore, 2)
+          
+          #unless 
+          pin.emit 'displayTotal', roundNum(averageScore, 2)
   pin.emit 'setScore', score
