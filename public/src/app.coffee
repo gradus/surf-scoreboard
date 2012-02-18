@@ -4,7 +4,7 @@ $ ->
     $('#scoring').append(" <li> <div class='alert alert-warning'> <p>Score: #{score.score}</p> </li>")
   now.displayTotal = (total) ->
     $('#totals').html('')
-    $('#totals').append(" <li> <div class='alert alert-warning'> <p>Total: #{total.total}</p> </li>")
+    $('#totals').append(" <li> <div class='alert alert-warning'> <p>Total: #{total}</p> </li>")
   hideCurrent = ->
     # current page fade
     $('.page.current').fadeOut(500).removeClass('current')
@@ -16,7 +16,7 @@ $ ->
       $(page).addClass('current').fadeIn(1000)
     setTimeout( show, 1000)
 
-  $('.nav li a').click -> 
+  $('.nav li a').click ->
     hideCurrent()
     showPage($(this).attr('href'))
 

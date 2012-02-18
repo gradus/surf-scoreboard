@@ -29,7 +29,7 @@
     "nock": "*"
   },
   "engines": {
-    "node": "0.6 || 0.7"
+    "node": "0.6.11 || 0.7.x"
   },
   "subdomain": "surf-scoreboard"
 }

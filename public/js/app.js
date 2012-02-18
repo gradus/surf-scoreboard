@@ -7,7 +7,7 @@
     };
     now.displayTotal = function(total) {
       $('#totals').html('');
-      return $('#totals').append(" <li> <div class='alert alert-warning'> <p>Total: " + total.total + "</p> </li>");
+      return $('#totals').append(" <li> <div class='alert alert-warning'> <p>Total: " + total + "</p> </li>");
     };
     hideCurrent = function() {
       $('.page.current').fadeOut(500).removeClass('current');

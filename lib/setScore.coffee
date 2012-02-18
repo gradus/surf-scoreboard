@@ -7,7 +7,7 @@ scores = db.collection('scores')
 scores.open -> pin.emit 'mongo.collection.scores.opened'
 
 pin.on 'setScore', (score) ->
-  scores.save score, (err, result) ->
+  scores.save score: score, (err, result) ->
     if err?
       console.log 'Error trying to save score to mongo'
     else

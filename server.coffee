@@ -24,23 +24,23 @@ app.post '/', express.bodyParser(), (req, resp) ->
   resp.cookie('judge_name', req.body.judge_name, { maxAge: 12000 * 10000 })
   resp.cookie('heat_num', req.body.heat_num, { maxAge: 400 * 10000 })
   resp.redirect '#scores'
-  resp.end fs.readFileSync('./public/index.html')
+  #resp.end fs.readFileSync('./public/index.html')
 
 app.post '/scores', express.bodyParser(), (req, resp) ->
   result = validateScore(req.body)
-  console.log req.body
   if result.valid
     pin.on 'displayScore', (score) ->
      resp.json errors: null, score: score
     pin.emit 'calculateScore', req.body
+    #resp.end
   else
-    resp.json errors: result.errors, records: null
+    resp.json errors: result.errors, score: null
+    #resp.end
 
 # Listen
 app.listen 3000, -> console.log 'Listening on port 3000'
 
 pin.on 'displayScore', (score) ->
   everyone.now.displayScore(score)
-pin.on 'setTotal', (total) ->
-  console.log total
-  everyone.now.displayTotal(total)
+pin.on 'setTotal', (averageScore) ->
+  everyone.now.displayTotal(averageScore)
