@@ -105,10 +105,10 @@ input#score, input#score2, input#score3, input#score4, input#score5, input#score
 
 #surfer3 {
   cursor: pointer;
-  padding 3px;
+  padding: 3px;
   color: #ffffff;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-  background-color: green;
+  background-color:  green;
   border: 1px solid #171717;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
