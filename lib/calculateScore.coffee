@@ -1,15 +1,11 @@
 pin = require('linchpin')
-mongo = require('mongoskin')
-db = require('mongoskin').db(process.env.MONGO or 'localhost:27017/scoreboard')
-
-# Open Collection
+mongode = require('mongode')
+db = mongode.connect(process.env.MONGODB or 'scoreboard', process.env.MONGO or '127.0.0.1')
 scores = db.collection('scores')
-scores.open -> pin.emit 'mongo.collection.scores.opened'
 
 # function to Round numbers
 roundNum = (num, dec) ->
-	Math.round(num*Math.pow(10,dec))/Math.pow(10,dec)
-
+  Math.round(num*Math.pow(10,dec))/Math.pow(10,dec)
 
 pin.on 'calculateScore', (score) ->
 
@@ -22,7 +18,6 @@ pin.on 'calculateScore', (score) ->
         if key == "score"
           @total += parseInt(val.score)
           averageScore = @total / scoresLength
-          
-          #unless 
           pin.emit 'displayTotal', roundNum(averageScore, 2)
+
   pin.emit 'setScore', score

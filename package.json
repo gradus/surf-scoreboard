@@ -11,11 +11,15 @@
   },
   "dependencies": {
     "coffee-script": ">= 1.x",
+    "mongodb": "*",
     "mongoskin": "*",
+    "mongode": "*",
     "express": "*",
     "utile": "*",
     "revalidator": "*",
     "now": "*",
+    "socket.io": "*",
+    "node-proxy": "*",
     "linchpin": "0.1.x"
   },
   "devDependencies": {

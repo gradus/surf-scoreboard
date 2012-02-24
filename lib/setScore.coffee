@@ -1,13 +1,10 @@
 pin = require('linchpin')
-mongo = require('mongoskin')
-db = require('mongoskin').db(process.env.MONGO or 'localhost:27017/scoreboard')
-
-# Open Collection
+mongode = require('mongode')
+db = mongode.connect(process.env.MONGODB or 'scoreboard', process.env.MONGO or '127.0.0.1')
 scores = db.collection('scores')
-scores.open -> pin.emit 'mongo.collection.scores.opened'
 
 pin.on 'setScore', (score) ->
-  scores.save score: score, (err, result) ->
+  scores.insert score: score, (err, result) ->
     if err?
       console.log 'Error trying to save score to mongo'
     else
