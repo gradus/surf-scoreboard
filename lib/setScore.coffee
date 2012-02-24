@@ -10,5 +10,10 @@ pin.on 'setScore', (score) ->
     else
       @id = result._id unless @id?
   pin.emit 'saveScore', score
-  pin.emit 'displayScore', score
+  pin.emit 'displayScoreYellow', score
+  pin.emit 'displayScoreRed', score
+  pin.emit 'displayScoreGreen', score
+  pin.emit 'displayScoreBlue', score
+  pin.emit 'displayScoreWhite', score
+  pin.emit 'displayScoreOrange', score
 

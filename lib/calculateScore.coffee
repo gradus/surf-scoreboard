@@ -19,5 +19,4 @@ pin.on 'calculateScore', (score) ->
           @total += parseInt(val.score)
           averageScore = @total / scoresLength
           pin.emit 'displayTotal', roundNum(averageScore, 2)
-
   pin.emit 'setScore', score

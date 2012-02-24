@@ -1,6 +1,6 @@
 revalidator = require 'revalidator'
 
-# Validate Scores Connect Middleware
+## Validate Scores Connect Middleware
 module.exports = (validateScore) ->
   revalidator.validate.messages.score = 'Score Value is Required...'
 

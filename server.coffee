@@ -46,7 +46,18 @@ app.post '/scores', express.bodyParser(), (req, resp) ->
 # Listen
 app.listen 3000, -> console.log 'Listening on port 3000'
 
-pin.on 'displayScore', (score) ->
-  everyone.now.displayScore(score)
+pin.on 'displayScoreYellow', (score) ->
+  everyone.now.displayScoreYellow(score)
+pin.on 'displayScoreGreen', (score) ->
+  everyone.now.displayScoreGreen(score)
+pin.on 'displayScoreRed', (score) ->
+  everyone.now.displayScoreRed(score)
+pin.on 'displayScoreBlue', (score) ->
+  everyone.now.displayScoreBlue(score)
+pin.on 'displayScoreWhite', (score) ->
+  everyone.now.displayScoreWhite(score)
+pin.on 'displayScoreOrange', (score) ->
+  everyone.now.displayScoreRed(score)
+
 pin.on 'displayTotal', (averageScore) ->
   everyone.now.displayTotal(averageScore)

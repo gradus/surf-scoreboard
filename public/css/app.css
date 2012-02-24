@@ -24,7 +24,7 @@ input#score, input#score2, input#score3, input#score4, input#score5, input#score
   width: 110px;
 }
 
-.alert_yellow {
+.alert-yellow {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   background-color: lightYellow;
   border: 1px solid #171717;
@@ -33,7 +33,7 @@ input#score, input#score2, input#score3, input#score4, input#score5, input#score
   border-radius: 4px;
 }
 
-.alert_red {
+.alert-red {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   background-color: red;
   border: 1px solid #171717;
@@ -42,7 +42,7 @@ input#score, input#score2, input#score3, input#score4, input#score5, input#score
   border-radius: 4px;
 }
 
-.alert_blue {
+.alert-blue {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   background-color: blue;
   border: 1px solid #171717;
@@ -51,7 +51,7 @@ input#score, input#score2, input#score3, input#score4, input#score5, input#score
   border-radius: 4px;
 }
 
-.alert_green {
+.alert-green {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   background-color: green;
   border: 1px solid #171717;
@@ -60,7 +60,7 @@ input#score, input#score2, input#score3, input#score4, input#score5, input#score
   border-radius: 4px;
 }
 
-.alert_orange {
+.alert-orange {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   background-color: orange;
   border: 1px solid #171717;
@@ -69,7 +69,7 @@ input#score, input#score2, input#score3, input#score4, input#score5, input#score
   border-radius: 4px;
 }
 
-.alert_white {
+.alert-white {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   background-color: whiteSmoke;
   border: 1px solid #171717;

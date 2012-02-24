@@ -1,6 +1,17 @@
 $ ->
-  now.displayScore = (score) ->
-    $('#scoring').append(" <li> <div class='alert alert-warning'> <p>#{score.judge_name} #{score.score}</p> </li>")
+  now.displayScoreYellow = (score) ->
+    $('#scoring').append(" <li> <div class='alert alert-yellow'> <p>#{score.judge_name} #{score.score}</p> </li>")
+  now.displayScoreRed = (score) ->
+    $('#scoring').append(" <li> <div class='alert alert-red'> <p>#{score.judge_name} #{score.score2}</p> </li>")
+  now.displayScoreGreen = (score) ->
+    $('#scoring').append(" <li> <div class='alert alert-green'> <p>#{score.judge_name} #{score.score3}</p> </li>")
+  now.displayScoreBlue = (score) ->
+    $('#scoring').append(" <li> <div class='alert alert-blue'> <p>#{score.judge_name} #{score.score4}</p> </li>")
+  now.displayScoreWhite = (score) ->
+    $('#scoring').append(" <li> <div class='alert alert-white'> <p>#{score.judge_name} #{score.score5}</p> </li>")
+  now.displayScoreOrange = (score) ->
+    $('#scoring').append(" <li> <div class='alert alert-orange'> <p>#{score.judge_name} #{score.score6}</p> </li>")
+
   now.displayTotal = (total) ->
     $('#totals').html('')
     $('#totals').append(" <li> <div class='alert alert-warning'> <p>#{total}</p> </li>")
