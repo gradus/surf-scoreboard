@@ -1,6 +1,6 @@
 pin = require('linchpin')
 mongode = require('mongode')
-db = mongode.connect(process.env.MONGODB or 'scoreboard', process.env.MONGO or '127.0.0.1')
+db = mongode.connect(process.env.MONGO or 'mongodb://127.0.0.1:27017/scoreboard')
 scores = db.collection('scores')
 
 # function to Round numbers

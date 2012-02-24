@@ -1,7 +1,7 @@
 {
   "name": "ScoreBoard",
   "description": "An Application for Scoring surf contests",
-  "version": "0.0.2-12",
+  "version": "0.0.2-14",
   "homepage": "http://",
   "author": "Kris Windham",
   "private": true,
@@ -12,8 +12,7 @@
   "dependencies": {
     "coffee-script": ">= 1.x",
     "mongodb": "*",
-    "mongoskin": "*",
-    "mongode": "*",
+    "mongode": ">= 0.1.3",
     "express": "*",
     "utile": "*",
     "revalidator": "*",
