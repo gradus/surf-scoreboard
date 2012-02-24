@@ -57,7 +57,7 @@ pin.on 'displayScoreBlue', (score) ->
 pin.on 'displayScoreWhite', (score) ->
   everyone.now.displayScoreWhite(score)
 pin.on 'displayScoreOrange', (score) ->
-  everyone.now.displayScoreRed(score)
+  everyone.now.displayScoreOrange(score)
 
 pin.on 'displayTotal', (averageScore) ->
   everyone.now.displayTotal(averageScore)
