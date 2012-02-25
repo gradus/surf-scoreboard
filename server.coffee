@@ -35,6 +35,7 @@ app.post '/', express.bodyParser(), (req, resp) ->
 app.post '/scores', express.bodyParser(), (req, resp) ->
   result = validateScore(req.body)
   if result.valid
+    pin.emit 'clearTotals'
     pin.on 'displayScore', (score) ->
      resp.json errors: null, score: score
     pin.emit 'calculateScore', req.body
@@ -59,5 +60,19 @@ pin.on 'displayScoreWhite', (score) ->
 pin.on 'displayScoreOrange', (score) ->
   everyone.now.displayScoreOrange(score)
 
-pin.on 'displayTotal', (averageScore) ->
-  everyone.now.displayTotal(averageScore)
+pin.on 'clearTotals', () ->
+  everyone.now.clearTotals()
+
+pin.on 'displayTotalYellow', (averageScore) ->
+  everyone.now.displayTotalYellow(averageScore)
+pin.on 'displayTotalRed', (averageScore) ->
+  everyone.now.displayTotalRed(averageScore)
+pin.on 'displayTotalGreen', (averageScore) ->
+  everyone.now.displayTotalGreen(averageScore)
+pin.on 'displayTotalBlue', (averageScore) ->
+  everyone.now.displayTotalBlue(averageScore)
+pin.on 'displayTotalWhite', (averageScore) ->
+  everyone.now.displayTotalWhite(averageScore)
+pin.on 'displayTotalOrange', (averageScore) ->
+  everyone.now.displayTotalOrange(averageScore)
+

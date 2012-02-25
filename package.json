@@ -1,7 +1,7 @@
 {
   "name": "ScoreBoard",
   "description": "An Application for Scoring surf contests",
-  "version": "0.0.2-16",
+  "version": "0.0.2-17",
   "homepage": "http://",
   "author": "Kris Windham",
   "private": true,

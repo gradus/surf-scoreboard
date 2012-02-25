@@ -3,26 +3,43 @@
   $(function() {
     var heatNum, hideCurrent, judgeName, showPage, surfer1, surfer2, surfer3, surfer4, surfer5, surfer6;
     now.displayScoreYellow = function(score) {
-      return $('#scoring').append(" <li> <div class='alert alert-yellow'> <p>" + score.wave_count + " " + score.judge_name + " " + score.score + "</p> </li>");
+      return $('#scoring').append(" <li> <div class='alert alert-yellow'> <p> " + score.judge_name + " " + score.score + "</p> </li>");
     };
     now.displayScoreRed = function(score) {
-      return $('#scoring').append(" <li> <div class='alert alert-red'> <p>" + score.wave_count + " " + score.judge_name + " " + score.score2 + "</p> </li>");
+      return $('#scoring').append(" <li> <div class='alert alert-red'> <p> " + score.judge_name + " " + score.score2 + "</p> </li>");
     };
     now.displayScoreGreen = function(score) {
-      return $('#scoring').append(" <li> <div class='alert alert-green'> <p>" + score.wave_count + " " + score.judge_name + " " + score.score3 + "</p> </li>");
+      return $('#scoring').append(" <li> <div class='alert alert-green'> <p>" + score.judge_name + " " + score.score3 + "</p> </li>");
     };
     now.displayScoreBlue = function(score) {
-      return $('#scoring').append(" <li> <div class='alert alert-blue'> <p>" + score.wave_count + " " + score.judge_name + " " + score.score4 + "</p> </li>");
+      return $('#scoring').append(" <li> <div class='alert alert-blue'> <p>" + score.judge_name + " " + score.score4 + "</p> </li>");
     };
     now.displayScoreWhite = function(score) {
-      return $('#scoring').append(" <li> <div class='alert alert-white'> <p>" + score.wave_count + " " + score.judge_name + " " + score.score5 + "</p> </li>");
+      return $('#scoring').append(" <li> <div class='alert alert-white'> <p>" + score.judge_name + " " + score.score5 + "</p> </li>");
     };
     now.displayScoreOrange = function(score) {
-      return $('#scoring').append(" <li> <div class='alert alert-orange'> <p>" + score.wave_count + " " + score.judge_name + " " + score.score6 + "</p> </li>");
+      return $('#scoring').append(" <li> <div class='alert alert-orange'> <p>" + score.judge_name + " " + score.score6 + "</p> </li>");
     };
-    now.displayTotal = function(total) {
-      $('#totals').html('');
-      return $('#totals').append(" <li> <div class='alert alert-warning'> <p>" + total + "</p> </li>");
+    now.clearTotals = function() {
+      return $('#totals').html('');
+    };
+    now.displayTotalYellow = function(total) {
+      return $('#totals').append(" <li> <div class='alert alert-yellow'> <p>" + total + "</p> </li>");
+    };
+    now.displayTotalRed = function(total) {
+      return $('#totals').append(" <li> <div class='alert alert-red'> <p>" + total + "</p> </li>");
+    };
+    now.displayTotalGreen = function(total) {
+      return $('#totals').append(" <li> <div class='alert alert-green'> <p>" + total + "</p> </li>");
+    };
+    now.displayTotalBlue = function(total) {
+      return $('#totals').append(" <li> <div class='alert alert-blue'> <p>" + total + "</p> </li>");
+    };
+    now.displayTotalWhite = function(total) {
+      return $('#totals').append(" <li> <div class='alert alert-white'> <p>" + total + "</p> </li>");
+    };
+    now.displayTotalOrange = function(total) {
+      return $('#totals').append(" <li> <div class='alert alert-orange'> <p>" + total + "</p> </li>");
     };
     hideCurrent = function() {
       $('.page.current').fadeOut(500).removeClass('current');
