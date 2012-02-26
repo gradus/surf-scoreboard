@@ -1,5 +1,5 @@
 require './lib/init'
-validateScore = require './lib/validateScore'
+#validateScore = require './lib/validateScore'
 pin = require 'linchpin'
 now = require 'now'
 fs = require 'fs'
@@ -30,19 +30,17 @@ app.post '/', express.bodyParser(), (req, resp) ->
   resp.cookie('surfer_5', req.body.surfer_5, { maxAge: 400 * 10000 })
   resp.cookie('surfer_6', req.body.surfer_6, { maxAge: 400 * 10000 })
   resp.redirect '#scores'
-  #resp.end fs.readFileSync('./public/index.html')
+
 
 app.post '/scores', express.bodyParser(), (req, resp) ->
-  result = validateScore(req.body)
-  if result.valid
-    pin.emit 'clearTotals'
-    pin.on 'displayScore', (score) ->
-     resp.json errors: null, score: score
-    pin.emit 'calculateScore', req.body
-    #resp.end
-  else
-    resp.json errors: result.errors, score: null
-    #resp.end
+  #result = validateScore(req.body)
+  #if result.valid
+  pin.on 'displayScore', (score) ->
+   resp.json errors: null, score: score
+  pin.emit 'calculateScore', req.body
+  #else
+    #resp.json errors: result.errors, score: null
+
 
 # Listen
 app.listen 3000, -> console.log 'Listening on port 3000'

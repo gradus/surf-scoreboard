@@ -13,7 +13,7 @@ pin.on 'calculateScore', (score) ->
   scores.find().toArray (err, result) ->
     scoresLength = result.length
     ## Needs Refactor !!!!!
-
+    pin.emit 'clearTotals'
     @total = 0
     @total2 = 0
     @total3 = 0
